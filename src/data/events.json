@@ -1,0 +1,163 @@
+{    "events": [
+      {
+        "id": 1,
+        "name": "Web Development Workshop",
+        "image": "webdev_workshop.jpg",
+        "time": "2023-08-10T15:30:00",
+        "presenter": "John Smith",
+        "video_link": "https://www.example.com/webdev_workshop_video"
+      },
+      {
+        "id": 2,
+        "name": "Design Thinking Conference",
+        "image": "design_conference.jpg",
+        "time": "2023-08-20T10:00:00",
+        "presenter": "Jane Johnson",
+        "video_link": "https://www.example.com/design_conference_video"
+      },
+      {
+        "id": 3,
+        "name": "React.js Basics",
+        "image": "react_basics.jpg",
+        "time": "2023-09-05T18:00:00",
+        "presenter": "Michael Williams",
+        "video_link": "https://www.example.com/react_basics_video"
+      },
+      {
+        "id": 4,
+        "name": "Node.js Crash Course",
+        "image": "nodejs_crash_course.jpg",
+        "time": "2023-09-15T14:30:00",
+        "presenter": "Emily Davis",
+        "video_link": "https://www.example.com/nodejs_crash_course_video"
+      },
+      {
+        "id": 5,
+        "name": "Python for Data Science",
+        "image": "python_data_science.jpg",
+        "time": "2023-09-25T11:00:00",
+        "presenter": "David Lee",
+        "video_link": "https://www.example.com/python_data_science_video"
+      },
+      {
+        "id": 6,
+        "name": "UI/UX Design Trends",
+        "image": "uiux_design_trends.jpg",
+        "time": "2023-10-10T16:30:00",
+        "presenter": "Sophia Brown",
+        "video_link": "https://www.example.com/uiux_design_trends_video"
+      },
+      {
+        "id": 7,
+        "name": "JavaScript Frameworks",
+        "image": "js_frameworks.jpg",
+        "time": "2023-10-20T10:30:00",
+        "presenter": "William Taylor",
+        "video_link": "https://www.example.com/js_frameworks_video"
+      },
+      {
+        "id": 8,
+        "name": "Machine Learning Workshop",
+        "image": "ml_workshop.jpg",
+        "time": "2023-11-05T09:00:00",
+        "presenter": "Olivia Hernandez",
+        "video_link": "https://www.example.com/ml_workshop_video"
+      },
+      {
+        "id": 9,
+        "name": "React Native Crash Course",
+        "image": "react_native_crash_course.jpg",
+        "time": "2023-11-15T13:00:00",
+        "presenter": "Ethan Martinez",
+        "video_link": "https://www.example.com/react_native_crash_course_video"
+      },
+      {
+        "id": 10,
+        "name": "Data Visualization Techniques",
+        "image": "data_visualization.jpg",
+        "time": "2023-11-25T15:30:00",
+        "presenter": "Ava Robinson",
+        "video_link": "https://www.example.com/data_visualization_video"
+      },
+      {
+        "id": 11,
+        "name": "Full-Stack Web Development",
+        "image": "fullstack_webdev.jpg",
+        "time": "2023-12-10T11:30:00",
+        "presenter": "Daniel White",
+        "video_link": "https://www.example.com/fullstack_webdev_video"
+      },
+      {
+        "id": 12,
+        "name": "Mobile App Design Principles",
+        "image": "mobile_app_design.jpg",
+        "time": "2023-12-20T14:00:00",
+        "presenter": "Isabella Lee",
+        "video_link": "https://www.example.com/mobile_app_design_video"
+      },
+      {
+        "id": 13,
+        "name": "Frontend Performance Optimization",
+        "image": "frontend_optimization.jpg",
+        "time": "2024-01-05T17:00:00",
+        "presenter": "Jacob Brown",
+        "video_link": "https://www.example.com/frontend_optimization_video"
+      },
+      {
+        "id": 14,
+        "name": "Cybersecurity Best Practices",
+        "image": "cybersecurity.jpg",
+        "time": "2024-01-15T12:30:00",
+        "presenter": "Mia Davis",
+        "video_link": "https://www.example.com/cybersecurity_video"
+      },
+      {
+        "id": 15,
+        "name": "GraphQL Fundamentals",
+        "image": "graphql_fundamentals.jpg",
+        "time": "2024-01-25T10:00:00",
+        "presenter": "Noah Johnson",
+        "video_link": "https://www.example.com/graphql_fundamentals_video"
+      },
+      {
+        "id": 16,
+        "name": "Artificial Intelligence Applications",
+        "image": "ai_applications.jpg",
+        "time": "2024-02-10T13:30:00",
+        "presenter": "Emma Wilson",
+        "video_link": "https://www.example.com/ai_applications_video"
+      },
+      {
+        "id": 17,
+        "name": "Vue.js Advanced Concepts",
+        "image": "vuejs_advanced.jpg",
+        "time": "2024-02-20T15:30:00",
+        "presenter": "James Martin",
+        "video_link": "https://www.example.com/vuejs_advanced_video"
+      },
+      {
+        "id": 18,
+        "name": "Digital Marketing Strategies",
+        "image": "digital_marketing.jpg",
+        "time": "2024-03-05T11:00:00",
+        "presenter": "Sophie Clark",
+        "video_link": "https://www.example.com/digital_marketing_video"
+      },
+      {
+        "id": 19,
+        "name": "Responsive Web Design",
+        "image": "responsive_web_design.jpg",
+        "time": "2024-03-15T16:00:00",
+        "presenter": "Ryan Thompson",
+        "video_link": "https://www.example.com/responsive_web_design_video"
+      },
+      {
+        "id": 20,
+        "name": "Blockchain Technology Explained",
+        "image": "blockchain_technology.jpg",
+        "time": "2024-03-25T09:30:00",
+        "presenter": "Liam Wilson",
+        "video_link": "https://www.example.com/blockchain_technology_video"
+      }
+    ]
+  }
