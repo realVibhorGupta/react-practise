@@ -7,9 +7,9 @@
     "dev": "npx webpack-dev-server --mode development",
     "build": "npx webpack --mode development",
     "start": "react-scripts start",
-    "test": "react-scripts test",
+    "test": "mocha \"src/**/**/*.test --require @babel/register --recursive",
     "eject": "react-scripts eject",
-    "flow":"flow"
+    "flow": "flow"
   },
   "keywords": [],
   "author": "vibhor",
@@ -17,6 +17,7 @@
   "devDependencies": {
     "@babel/cli": "^7.22.9",
     "@babel/core": "^7.22.9",
+    "@babel/plugin-transform-runtime": "^7.22.9",
     "@babel/preset-env": "^7.22.9",
     "@babel/preset-react": "^7.22.5",
     "babel-loader": "^9.1.3",
@@ -28,8 +29,12 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "@babel/register": "^7.22.5",
+    "@babel/runtime": "^7.22.6",
+    "chai": "^4.3.7",
     "eslint": "^8.45.0",
     "flow-bin": "^0.213.1",
+    "mocha": "^10.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.45.2",
@@ -39,7 +44,9 @@
     "react-router-dom": "^6.14.2",
     "react-scripts": "^5.0.1",
     "redux": "^4.2.1",
-    "redux-persist": "^6.0.0"
+    "redux-devtools-extension": "^2.13.9",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.4.2"
   },
   "browserslist": {
     "production": [

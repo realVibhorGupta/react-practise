@@ -3,11 +3,11 @@ import { BiAddToQueue, BiAlarmAdd, BiTrash } from "react-icons/bi";
 
 const AppointmentInfo = ({ appointment,onDeleteAppointment }) => {
 	return (
-		<div>
+		<div>	
 			<ul className="divide-y divide-gray-400">
 				<li className="px-3 py-3 flex flex-row items-start">
 					<button
-						onClick={() => onDeleteAppointment(appointment)}
+						onClick={() => onDeleteAppointment(appointment.id)}
 						type="button"
 						className="p-1.5 mr-1.5 mt-1 rounded text-white bg-red-500 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
 					>

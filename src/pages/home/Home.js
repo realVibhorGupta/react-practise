@@ -2,12 +2,30 @@ import React, { useState, useCallback, useEffect } from "react";
 import Search from "../../components/search/Search";
 import AddAppointment from "../../components/appointment/AddAppointment";
 import AppointmentInfo from "../../components/appointment/AppointmentInfo";
-// import TodoList from "../../components/todos/TodoList";
+import TodoList from "../../components/todos/TodoList";
 // import appointmentData from "../../data/appointmentData.json"
 
 const Home = ({ title }) => {
 	const [appointmentList, setAppointmentList] = useState([]);
 	const [query, setQuery] = useState("");
+	const [sortBy, setSortBy] = useState("petName");
+	const [orderBy, setOrderBy] = useState("asc");
+
+	const onSendAppointment=(myappoint)=>setAppointmentList([...appointmentList,myappoint]);
+
+	const filteredAppointments = appointmentList.filter((item) => {
+		return (
+			item.petName.toLowerCase().includes(query.toLowerCase()) ||
+			item.ownerName.toLowerCase().includes(query.toLowerCase()) ||
+			item.appNote.toLowerCase().includes(query.toLowerCase())
+		);
+	}).sort((a,b)=>{
+		let order = (orderBy === 'asc') ? 1 : -1
+		return (
+			a[sortBy].toLowerCase() < b[sortBy].toLowerCase() ? -1 * order : 1 * order
+		)
+	}	)
+
 	const fetchData = useCallback(() => {
 		fetch("./appointmentData.json")
 			.then((response) => response.json())
@@ -20,24 +38,11 @@ const Home = ({ title }) => {
 		fetchData();
 	}, [fetchData]);
 
-	const onDeleteAppointment = () => {
-		(appointmentId) =>
-			setAppointmentList(
-				appointmentList.filter(
-					(appointment) => appointment.id !== appointmentId
-				)
-			);
-	};
-
 	const onQueryChange = () => {
 		(query) => setQuery(query);
 	};
 
 
-	const sortBy =()=>{}
-	const onSortByChange =()=>{}
-	const orderBy =()=>{}
-	const onOrderByChange  =()=>{}
 	return (
 		<>
 			<h1 className="text-4xl font-bold text-center">
@@ -45,26 +50,34 @@ const Home = ({ title }) => {
 			</h1>
 			<h2 className="text-2xl font-bold text-start">Todo Lists</h2>
 
-			{/* <TodoList/> */}
+			<TodoList/>
 
 			<h2 className="text-2xl font-bold text-start">Add An Appointment</h2>
-			<AddAppointment />
+			<AddAppointment onSendAppointment={onSendAppointment} lastId = {appointmentList.reduce((max,item)=>Number(item.id)>max?Number(item.id):max,0 )} />
 
 			<Search
 				query={query}
-				onQueryChange={onQueryChange}
+				onQueryChange={myQuery =>setQuery(myQuery)}
 				sortBy={sortBy}
-				onSortByChange={onSortByChange}
+				onSortByChange={mySort => setSortBy(mySort)}
 				orderBy={orderBy}
-				onOrderByChange={onOrderByChange}
+				onOrderByChange={myOrder => setOrderBy(myOrder)}
 			/>
 
 			<h2 className="text-2xl font-bold text-start">Appointment List</h2>
-			{appointmentList.map((appointment) => (
+
+			{filteredAppointments.map((appointment) => (
+
 				<AppointmentInfo
 					key={appointment.id}
 					appointment={appointment}
-					onDeleteAppointment={onDeleteAppointment}
+					onDeleteAppointment={(appointmentId) =>
+						setAppointmentList(
+							appointmentList.filter(
+								(appointment) => appointment.id !== appointmentId
+							)
+						)
+					}
 				/>
 			))}
 		</>

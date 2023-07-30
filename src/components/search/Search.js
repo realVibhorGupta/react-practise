@@ -20,6 +20,7 @@ const Search = ({
 				</div>
 				<input
 					type="text"
+					
 					name="query"
 					className="w-full py-3 bg-gray-100 rounded pl-10 focus:outline-none text-sm leading-none text-gray-600 placeholder-gray-600"
 					id="query"
