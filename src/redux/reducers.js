@@ -52,7 +52,7 @@ export const todosReducer = (state = [], action) => {
 		}
 		case DELETE_TODO: {
 			const { text } = payload;
-			return state.filter((todo) => todo.text !== text);
+			return null
 		}
 		case MARK_TASK_AS_COMPLETED:
 			const { text } = payload;
@@ -62,6 +62,14 @@ export const todosReducer = (state = [], action) => {
 				}
 				return true;
 			});
+		case LOAD_TODOS_IN_SUCCESS:
+			const { todos} = payload
+			return todos;
+
+		case LOAD_TODOS_IN_PROGRESS:
+			return true;
+		case LOAD_TODOS_IN_FAILURE:
+			return false;
 
 		default:
 			return state;

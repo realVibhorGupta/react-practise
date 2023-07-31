@@ -1,16 +1,25 @@
-import React from "react";
+import React, {useEffect} from "react";
 import TodoListItem from "./TodoListItem";
 import NewTodoForm from "./NewTodoForm";
 import { connect } from "react-redux";
+import {loadTodos} from "../../redux/thunks"
 import {
 	markTodoAsCompletedAction,
 	removeTodoAction,
 } from "../../redux/actions";
 // import  {isLoadingReducer} from '../../redux/reducers'
-import { displayAlert } from "../../redux/thunk";
-const TodoList = ({ todolist = [], onRemovePressed,onAlertDisplayClicked ,isloading}) => {
+import { displayAlert } from "../../redux/thunks";
+const TodoList = ({ todolist = [], onRemovePressed,onAlertDisplayClicked ,isLoading}) => {
 
 	const loadingMessage = <div>Tasks Loading... </div>
+	useEffect(() => {
+
+
+		return () => {
+
+		}
+	}, [])
+
 	const content =  (
 
 		<div className="list-wrapper">
@@ -25,9 +34,9 @@ const TodoList = ({ todolist = [], onRemovePressed,onAlertDisplayClicked ,isload
 		</div>
 
 	);
-	return isloading ? loadingMessage : content
+	return isLoading ? loadingMessage : content
 };
-const mapStateToProps = (state) => ({ todolist: state.todolist });
+const mapStateToProps = (state) => ({ isLoading: state.isLoading,todolist: state.todolist });
 
 const mapDispatchToProps = (dispatch) => ({
 	onRemovePressed:(text) => dispatch(removeTodoAction(text)),

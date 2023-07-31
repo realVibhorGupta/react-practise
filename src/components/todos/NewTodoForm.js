@@ -17,8 +17,8 @@ const NewTodoForm = ({ todos, onCreatePressed }) => {
 		<div>
 			<form onSubmit={handleSubmit(onSubmit)} className="flex flex-row">
 				<input
-											placeholder="Add Your Task Here"
-				className="w-full py-3 bg-gray-100 rounded pl-10 focus:outline-none text-sm leading-none text-gray-600 placeholder-gray-600 border-b"
+					placeholder="Add Your Task Here"
+					className="w-full py-3 bg-gray-100 rounded pl-10 focus:outline-none text-sm leading-none text-gray-600 placeholder-gray-600 border-b"
 					{...register("Add Your Task Here", { required: true })}
 					value={inputValue}
 					onChange={(e) => setInputValue(e.target.value)}
@@ -29,10 +29,9 @@ const NewTodoForm = ({ todos, onCreatePressed }) => {
 					className="justify-center px-4 py-2 bg-blue-400 border-2 border-blue-400 text-sm text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 flex items-center	cursor-pointer"
 					onClick={() => {
 						const isDuplicateValue = todos.some(
-							todo => todo.text === inputValue
-
+							(todo) => todo.text === inputValue
 						);
-						console.info(todos)
+						console.info(todos);
 						if (!isDuplicateValue) {
 							onCreatePressed(inputValue);
 							setInputValue("");
