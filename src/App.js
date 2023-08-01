@@ -15,6 +15,7 @@ import Categories from "./pages/categories/Categories";
 import Confirm from "./components/confirmed/Confirm";
 import AddAppointment from "./components/appointment/AddAppointment";
 import AppointmentInfo from "./components/appointment/AppointmentInfo";
+import Blog from "./pages/blog/Blog";
 
 const App = () => {
 	return (
@@ -27,10 +28,10 @@ const App = () => {
 					<Route path="about" element={<About />} />
 					<Route path="contact" element={<Contact />} />
 					<Route path="register" element={<Register />} />
+					<Route path="blog" element={<Blog />} />
 					<Route path="login" element={<Login />} />
 					<Route path="categories" element={<Categories />}>
 					<Route index element={<h1>Select Category from Above</h1>} />
-
 						<Route path=":catId" element={<Category />} />
 					</Route>
 					<Route path="*" element={<Error404 />} />

@@ -196,7 +196,15 @@ const Navbar = () => {
 								Categories
 							</NavLink>
 						</button>
-					
+						<button className="py-3 h-full text-gray-600 focus:text-blue-700 text-center border-b-2 focus:outline-none focus:border-blue-700 border-transparent">
+							<NavLink
+								to="blog"
+								className="text-sm focus:outline-none font-medium leading-4 px-4 py-3 hover:bg-blue-50 hover:text-blue-700 rounded"
+							>
+								Blogs
+							</NavLink>
+						</button>
+
 					</div>
 					<div className="relative py-3 flex justify-end items-center w-full space-x-6">
 						<button className="p-3 focus:outline-none rounded text-xs font-medium leading-3 hover:text-blue-700 hover:bg-blue-50 focus:bg-blue-700 focus:text-white text-gray-600">
@@ -450,7 +458,7 @@ const Navbar = () => {
 					</div>
 					<div
 						id="searchItemsSecond"
-						className="hidden w-full flex justify-between items-center"
+						className="md:	hidden w-full flex justify-between items-center"
 					>
 						<div className="relative w-full flex justify-start items-center mr-4 md:mr-16">
 							<input
@@ -486,12 +494,12 @@ const Navbar = () => {
 
 							<div
 								id="popup2"
-								className="hidden ease-in-out transition duration-500 bg-white z-20 top-20 absolute w-full shadow border rounded border-gray-200 py-3 flex justify-center items-start flex-col"
+								className="md:hidden ease-in-out transition duration-500 bg-white z-20 top-20 absolute w-full shadow border rounded border-gray-200 py-3 flex justify-center items-start flex-col"
 							>
 								<p className="px-3 text-left w-full text-sm font-medium leading-4 text-gray-800">
 									Products
 								</p>
-								<button className="mt-2 flex py-2 px-3 w-full flex justify-start items-center space-x-2 hover:bg-blue-50 rounded">
+								<button className="mt-2  py-2 px-3 w-full flex justify-start items-center space-x-2 hover:bg-blue-50 rounded">
 									<div>
 										<img
 											src="https://i.ibb.co/BrPztW1/Coinbase-Icon.png"

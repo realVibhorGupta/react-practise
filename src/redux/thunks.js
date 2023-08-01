@@ -17,7 +17,7 @@ export const loadTodos = async (dispatch, getState) => {
 	} catch (error) {
 		dispatch(loadTodoInFailureAction());
 		console.error(error);
-	}
+	}	
 };
 
 
