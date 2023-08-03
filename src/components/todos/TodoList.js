@@ -40,7 +40,7 @@ const TodoList = ({
 					onCompletedPressed={onCompletedPressed}
 				/>;
 			})}
-				<h3>Incomplete Tasks</h3>
+			<h3>Incomplete Tasks</h3>
 			{completedTodos.map((listItem) => {
 				<TodoListItem
 					task={task}
@@ -54,8 +54,8 @@ const TodoList = ({
 };
 const mapStateToProps = (state) => ({
 	isLoading: getTodosLoading(state),
-	completedTodos :getCompletedTodos(state),
-	uncompletedTodos :getIncompletedTodos(state),
+	completedTodos: getCompletedTodos(state),
+	uncompletedTodos: getIncompletedTodos(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({

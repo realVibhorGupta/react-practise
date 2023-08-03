@@ -1,6 +1,5 @@
 import {
 	createTodoAction,
-
 	loadTodoInFailureAction,
 	loadTodoInProgressAction,
 	loadTodoInSuccessAction,
