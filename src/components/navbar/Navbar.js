@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
 	const [isActive, setIsActive] = useState(false);
@@ -34,7 +34,7 @@ const Navbar = () => {
 		document.getElementById(id).classList.toggle("-translate-x-full");
 		document.getElementById(id + "Open").classList.toggle("hidden");
 		document.getElementById(id + "Close").classList.toggle("hidden");
-		document.getElementById(id + "SearchandAvatar").classList.toggle("hidden");
+		document.getElementById(id + "SearchAndAvatar").classList.toggle("hidden");
 	};
 
 	const show2 = (id) => {
@@ -46,6 +46,7 @@ const Navbar = () => {
 			<div className="hidden lg:block relative border-b mb-8 px-8 border-gray-100">
 				<div className="2xl:container 2xl:mx-auto flex justify-between items-center w-full">
 					<div className="relative w-full py-3 flex justify-start items-center space-x-4">
+					<Link to = '/'>
 						<svg
 							className="cursor-pointer"
 							width="50"
@@ -59,6 +60,7 @@ const Navbar = () => {
 								fill="#1F2937"
 							/>
 						</svg>
+						</Link>
 						<div className="relative w-64 flex justify-start items-center">
 							<input
 								oninput="showDiv(this)"
@@ -88,6 +90,7 @@ const Navbar = () => {
 									stroke-linejoin="round"
 								/>
 							</svg>
+
 						</div>
 
 						<div
@@ -97,12 +100,14 @@ const Navbar = () => {
 							<p className="px-3 text-left w-full text-sm font-medium leading-4 text-gray-800">
 								Products
 							</p>
-							<button className="w-full mt-2 flex p-2 flex justify-start items-center space-x-2 hover:bg-blue-50 rounded">
+							<button className="w-full mt-2  p-2 flex justify-start items-center space-x-2 hover:bg-blue-50 rounded">
 								<div>
+									<Link to = '/'>
 									<img
 										src="https://i.ibb.co/BrPztW1/Coinbase-Icon.png"
 										alt="Coinbase-Icon"
 									/>
+									</Link>
 								</div>
 								<div className="flex justify-start items-start flex-col space-y-1">
 									<p className="text-xs text-left leading-3 text-gray-800">
@@ -285,7 +290,9 @@ const Navbar = () => {
 						id="searchItems"
 						className="w-full flex justify-between items-center"
 					>
+							<Link to ='/'>
 						<button className="">
+
 							<svg
 								width="50"
 								height="32"
@@ -298,11 +305,13 @@ const Navbar = () => {
 									fill="#1F2937"
 								/>
 							</svg>
+
 						</button>
-						<div className="flex jusitfy-end items-center space-x-10">
+						</Link>
+						<div className="flex justify-end items-center space-x-10">
 							<div
 								id="navSearchandAvatar"
-								className="flex jusitfy-end items-center space-x-10"
+								className="flex justify-end items-center space-x-10"
 							>
 								<button onclick="show2('searchItems')" aria-label="search">
 									<svg
@@ -515,7 +524,7 @@ const Navbar = () => {
 										</p>
 									</div>
 								</button>
-								<button className="mt-2 flex py-2 px-3 w-full flex justify-start items-center space-x-2 hover:bg-blue-50 rounded">
+								<button className="mt-2 flex py-2 px-3 w-full  justify-start items-center space-x-2 hover:bg-blue-50 rounded">
 									<div>
 										<img
 											src="https://i.ibb.co/7KJTB5r/CNN-Icon.png"
@@ -581,7 +590,7 @@ const Navbar = () => {
 					className="-translate-x-full transform ease-in-out transition duration-500 w-full h-full bg-gray-600 bg-opacity-80"
 				>
 					<div className="w-full sm:w-64 flex-col bg-white h-full flex justify-between items-start px-2 md:px-4 pb-4">
-						<div className="flex flex-col jusitfy-start items-start w-full">
+						<div className="flex flex-col justify-start items-start w-full">
 							<button className="py-2 text-gray-600 focus:text-blue-700 text-left border-b-2 w-full focus:outline-none focus:border-blue-700 border-transparent">
 								<p className="text-sm focus:outline-none font-medium leading-4 w-full px-2 md:px-4 py-3 hover:bg-blue-50 hover:text-blue-700 rounded">
 									Home

@@ -1,30 +1,30 @@
 export const CREATE_TODO = 'CREATE_TODO'
 
-export const createTodoAction = text => ({
+export const createTodoAction = todo => ({
 	type : CREATE_TODO,
-	payload : { text },
+	payload : { todo },
 })
 
 
  export const REMOVE_TODO = 'REMOVE_TODO'
- export const removeTodoAction = text => ({
+ export const removeTodoAction = todo => ({
 	type : REMOVE_TODO,
-	payload : { text },
+	payload : { todo },
 })
 
 
 
 export const UPDATE_TODO = 'UPDATE_TODO'
-export const updateTodoAction = text => ({
+export const updateTodoAction = todo => ({
  type : UPDATE_TODO,
- payload : { text },
+ payload : { todo },
 })
 
 
 export const DELETE_TODO = 'DELETE_TODO'
-export const deleteTodoAction = text => ({
+export const deleteTodoAction = todo => ({
  type : DELETE_TODO,
- payload : { text },
+ payload : { todo },
 })
 
 export const MARK_TASK_AS_COMPLETED = "MARK_TASK_AS_COMPLETED"

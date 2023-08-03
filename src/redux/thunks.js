@@ -1,7 +1,10 @@
 import {
+	createTodoAction,
+
 	loadTodoInFailureAction,
 	loadTodoInProgressAction,
 	loadTodoInSuccessAction,
+	removeTodoAction,
 } from "./actions";
 
 export const displayAlert = () => {
@@ -17,23 +20,37 @@ export const loadTodos = async (dispatch, getState) => {
 	} catch (error) {
 		dispatch(loadTodoInFailureAction());
 		console.error(error);
-	}	
+	}
 };
 
-
-const addTodoRequests = async text => {
-	try{}catch(e){
-		const body = JSON.stringify({text});
-		const response = await fetch("http://localhost:8080/todos" ,	{
-
-			headers:{
-				'COntent-Type': 'application/json',
+export const addTodoRequests = (text = async (dispatch) => {
+	try {
+		const body = JSON.stringify({ text });
+		const response = await fetch("http://localhost:8080/todos", {
+			headers: {
+				"COntent-Type": "application/json",
 			},
-			method:'post',
-			body
-
-			});
-
-		console.error(e)
+			method: "post",
+			body,
+		});
+		const todo = await response.json();
+		dispatch(createTodoAction(todo));
+	} catch (e) {
+		console.error(e);
 	}
-}
+});
+
+export const removeTodoRequests = (id = async (dispatch) => {
+	try {
+		const response = await fetch(`http://localhost:8080/todos/${id}`, {
+			headers: {
+				"Content-Type": "application/json",
+			},
+			method: "delete",
+		});
+		const removeTodo = response.json();
+		dispatch(removeTodoAction(removeTodo));
+	} catch (error) {
+		console.error(error);
+	}
+});

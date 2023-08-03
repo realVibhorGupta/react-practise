@@ -3,6 +3,7 @@ import path from "path";
 const app = express();
 
 app.use(express.static(path.join(__dirname, "/build")));
+const dev = process.env.NODE_DEV !== 'production' //true false
 
 const PORT = 3000;
 

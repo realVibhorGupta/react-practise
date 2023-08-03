@@ -9,33 +9,18 @@ import {
 	LOAD_TODOS_IN_FAILURE,
 } from "./actions";
 
-export const isLoadingReducer = (state = false, action) => {
-	const type = { action };
-
-	switch (type) {
-		case LOAD_TODOS_IN_SUCCESS:
-
-		case LOAD_TODOS_IN_PROGRESS:
-			return true;
-		case LOAD_TODOS_IN_FAILURE:
-			return false;
-		default:
-			return state;
-	}
-};
-
 const initialState = { isLoading: false, data: [] };
 
-export const todosReducer = (state = [], action) => {
+export const todosReducer = (state = initialState, action) => {
 	const { type, payload } = action;
 	switch (type) {
 		case CREATE_TODO: {
-			const { text } = payload;
-			const newTask = {
-				text,
-				isCompleted: false,
-			};
-			return state.concat(newTask);
+			const { todo } = payload;
+			// const newTask = {
+			// 	text,
+			// 	isCompleted: false,
+			// };
+			return { ...state, data: state.data.concat(todo) };
 		}
 		case UPDATE_TODO: {
 			const { text } = payload;
@@ -46,30 +31,39 @@ export const todosReducer = (state = [], action) => {
 			return state.concat(newTask);
 		}
 		case REMOVE_TODO: {
-			const { text } = payload;
+			const { todo: todoToRemove } = payload;
 
-			return state.filter((todo) => todo.text !== text);
+			return {
+				...state,
+				data: state.data.filter((todo) => todo.id !== todoToRemove.id),
+			};
 		}
 		case DELETE_TODO: {
 			const { text } = payload;
-			return null
+			return null;
 		}
 		case MARK_TASK_AS_COMPLETED:
-			const { text } = payload;
+			const { todo: updatedTodo } = payload;
 			return state.map((todo) => {
-				if (todo.text === text) {
-					return { ...todo, isCompleted: true };
+				if (todo.id === updatedTodo.id) {
+					return updatedTodo;
 				}
-				return true;
+				return todo;
 			});
 		case LOAD_TODOS_IN_SUCCESS:
-			const { todos} = payload
-			return todos;
+			const { todos } = payload;
+			return { ...state, isLoading: false, data: todos };
 
 		case LOAD_TODOS_IN_PROGRESS:
-			return true;
+			return {
+				...state,
+				isLoading: true,
+			};
 		case LOAD_TODOS_IN_FAILURE:
-			return false;
+			return {
+				...state,
+				isLoading: false,
+			};
 
 		default:
 			return state;
