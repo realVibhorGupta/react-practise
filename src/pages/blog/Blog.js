@@ -1,5 +1,6 @@
-import React from 'react'
-import BlogList from '../../components/bloglist/BlogList'
+// @flow
+import React from "react";
+import BlogList from "../../components/bloglist/BlogList";
 
 const Blog = () => {
 	return (
@@ -7,7 +8,7 @@ const Blog = () => {
 			<h1>Blogs</h1>
 			<BlogList />
 		</div>
-	)
-}
+	);
+};
 
-export default Blog
+export default Blog;

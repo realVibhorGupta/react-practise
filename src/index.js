@@ -12,6 +12,7 @@ const store  = configureStore();
 const persistor = persistStore(store)
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+// serverside rendering use root.hydrate
 root.render(
 	<React.StrictMode>
 		<Provider  store={store}>

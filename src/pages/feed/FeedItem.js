@@ -1,9 +1,8 @@
-import React from 'react'
+// @flow
+import React from "react";
 
 const FeedItem = () => {
-	return (
-		<div>FeedItem</div>
-	)
-}
+	return <div>FeedItem</div>;
+};
 
-export default FeedItem
+export default FeedItem;

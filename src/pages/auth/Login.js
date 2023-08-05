@@ -1,3 +1,4 @@
+// @flow
 import React from "react";
 
 const Login = () => {
@@ -30,7 +31,7 @@ const Login = () => {
 								Sign up here
 							</a>
 						</p>
-						
+
 						<div>
 							<label
 								id="email"

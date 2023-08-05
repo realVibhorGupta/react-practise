@@ -17,7 +17,12 @@ import AddAppointment from "./components/appointment/AddAppointment";
 import AppointmentInfo from "./components/appointment/AppointmentInfo";
 import Blog from "./pages/blog/Blog";
 
+
+
 const App = () => {
+
+
+
 	return (
 		<div className="container mx-10">
 			<BrowserRouter>

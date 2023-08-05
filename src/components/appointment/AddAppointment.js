@@ -1,3 +1,4 @@
+// @flow
 import React from "react";
 import { BiCalendarPlus } from "react-icons/bi";
 import { useState } from "react";

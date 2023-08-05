@@ -1,3 +1,4 @@
+// @flow
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
@@ -95,7 +96,7 @@ const Navbar = () => {
 
 						<div
 							id="popup"
-							className="hidden ease-in-out transition duration-500 bg-white z-20 top-20 left-12 absolute w-64 shadow border rounded border-gray-200 py-3 flex justify-center items-start flex-col"
+							className="md:hidden ease-in-out transition duration-500 bg-white z-20 top-20 left-12 absolute w-64 shadow border rounded border-gray-200 py-3 flex justify-center items-start flex-col"
 						>
 							<p className="px-3 text-left w-full text-sm font-medium leading-4 text-gray-800">
 								Products
@@ -118,7 +119,7 @@ const Navbar = () => {
 									</p>
 								</div>
 							</button>
-							<button className="w-full mt-2 flex p-2 flex justify-start items-center space-x-2 hover:bg-blue-50 rounded">
+							<button className="w-full mt-2  p-2 flex justify-start items-center space-x-2 hover:bg-blue-50 rounded">
 								<div>
 									<img
 										src="https://i.ibb.co/7KJTB5r/CNN-Icon.png"
@@ -231,7 +232,7 @@ const Navbar = () => {
 								</div>
 								<div className="flex justify-start items-start flex-col space-y-2">
 									<p className="text-sm font-medium leading-3 text-gray-700">
-										Mark Spensor
+										Mark Spenser
 									</p>
 									<p className="text-xs leading-3 text-gray-600">
 										Markeenspensor@alphasquad.com
@@ -467,7 +468,7 @@ const Navbar = () => {
 					</div>
 					<div
 						id="searchItemsSecond"
-						className="md:	hidden w-full flex justify-between items-center"
+						className="md:hidden w-full flex justify-between items-center"
 					>
 						<div className="relative w-full flex justify-start items-center mr-4 md:mr-16">
 							<input

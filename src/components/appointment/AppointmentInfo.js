@@ -1,9 +1,10 @@
+// @flow
 import React from "react";
 import { BiAddToQueue, BiAlarmAdd, BiTrash } from "react-icons/bi";
 
 const AppointmentInfo = ({ appointment,onDeleteAppointment }) => {
 	return (
-		<div>	
+		<div>
 			<ul className="divide-y divide-gray-400">
 				<li className="px-3 py-3 flex flex-row items-start">
 					<button

@@ -1,3 +1,4 @@
+// @flow
 import react, { useState } from "react";
 import { BiSearch, BiCaretDown, BiCheck } from "react-icons/bi";
 

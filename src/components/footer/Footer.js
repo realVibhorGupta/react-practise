@@ -1,3 +1,4 @@
+// @flow
 import React from "react";
 
 const Footer = () => {
@@ -165,7 +166,7 @@ const Footer = () => {
 											/>
 											<img
 												id="light"
-												className="dark:block hidden hidden absolute inset-0 m-auto ml-3 text-gray-700 dark:text-gray-50 icon icon-tabler icon-tabler-brightness-up"
+												className="dark:block hidden  absolute inset-0 m-auto ml-3 text-gray-700 dark:text-gray-50 icon icon-tabler icon-tabler-brightness-up"
 												src="https://tuk-cdn.s3.amazonaws.com/can-uploader/footer_1-svg4dark.svg"
 												alt="light"
 											/>
@@ -177,7 +178,7 @@ const Footer = () => {
 											/>
 											<img
 												id="dark"
-												className="dark:block hidden hidden absolute inset-0 m-auto ml-3 text-gray-700 dark:text-gray-50 icon icon-tabler icon-tabler-moon"
+												className="dark:block  hidden absolute inset-0 m-auto ml-3 text-gray-700 dark:text-gray-50 icon icon-tabler icon-tabler-moon"
 												src="https://tuk-cdn.s3.amazonaws.com/can-uploader/footer_1-svg5dark.svg"
 												alt="dark"
 											/>
